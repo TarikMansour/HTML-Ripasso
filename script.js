@@ -4,6 +4,7 @@ const login = document.querySelector('.login');
 const signin = document.querySelector('.sign-in');
 const pfp = document.querySelector('.hidden');
 const logoutbtn = document.getElementById('logoutbtn');
+const conferma = document.getElementById('conferma');
 const verifica = localStorage.getItem('loggedin');
     checkboxes.forEach(checkbox => {
         checkbox.addEventListener('change', () => { // Questo evento viene attivato quando il valore della checkbox cambia
@@ -15,15 +16,27 @@ const verifica = localStorage.getItem('loggedin');
             }
         });
     });
-    
-      if(verifica === 'true'){
-        pfp.className = 'logged';
-        login.className ='hidden';
-        signin.className ='hidden';
+    if (localStorage.getItem('elementClass') === 'logged') {
+      pfp.classList.add('logged');
+      pfp.classList.remove('hidden'); 
+      login.classList.add('hidden'); 
+      signin.classList.add('hidden'); 
+      } else {
+      pfp.classList.add('hidden'); 
       }
+
       logoutbtn.addEventListener('click', function(event){
         event.preventDefault();
-        pfp.className='hidden';
-        login.className ='login';
-        signin.className ='sign-in';
+        pfp.classList.add('hidden'); 
+        login.classList.remove('hidden'); 
+        signin.classList.remove('hidden');
+        localStorage.removeItem('elementClass');
+      });
+      conferma.addEventListener('click', function(event){
+        event.preventDefault();
+        pfp.classList.add('logged'); 
+        pfp.classList.remove('hidden'); 
+        login.classList.add('hidden'); 
+        signin.classList.add('hidden'); 
+        localStorage.setItem('elementClass', 'logged');
       })
