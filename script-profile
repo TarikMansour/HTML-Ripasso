@@ -1,0 +1,26 @@
+const profile1 = document.getElementById('pfp1');
+const profile2 = document.getElementById('pfp2');
+const profile3 = document.getElementById('pfp3');
+const main = document.getElementById('main-pic');
+
+profile1.addEventListener("click", function(){
+    main.src = "https://avatars.githubusercontent.com/u/121286624?v=4"
+    localStorage.setItem('pfp1', 'true');
+});
+profile2.addEventListener("click", function(){
+    main.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Kebab.JPG/640px-Kebab.JPG"
+    localStorage.setItem('pfp2', 'true');
+});
+profile3.addEventListener("click", function(){
+    main.src = "https://upload.wikimedia.org/wikipedia/it/thumb/7/77/Pikachu.png/800px-Pikachu.png"
+    localStorage.setItem('pfp3', 'true');
+});
+if(localStorage.getItem('pfp1') === 'true'){
+    main.src = "https://avatars.githubusercontent.com/u/121286624?v=4"
+}
+if(localStorage.getItem('pfp2') === 'true'){
+    main.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Kebab.JPG/640px-Kebab.JPG"
+}
+if(localStorage.getItem('pfp3') === 'true'){
+    main.src = "https://upload.wikimedia.org/wikipedia/it/thumb/7/77/Pikachu.png/800px-Pikachu.png"
+}
