@@ -7,13 +7,21 @@
     <link rel="stylesheet" href="profile-style.css">
 </head>
 <body style="background-color: black;">
-    <center>
         <div class="container" style="background-color: aquamarine;">
-        <img class="pfp" src="https://www.pngitem.com/pimgs/m/35-350426_profile-icon-png-default-profile-picture-png-transparent.png" alt="foto profilo">
+        <div class="dropdown">
+            <img class="pfp" id="main-pic" src="https://www.pngitem.com/pimgs/m/35-350426_profile-icon-png-default-profile-picture-png-transparent.png" alt="foto profilo">
+            <div class="dropdown-content">
+                <ul id="dropdown-list">
+                  <li><a id="pfp1"><img class="pfp" src="https://avatars.githubusercontent.com/u/121286624?v=4" alt="foto profilo"></a></li>
+                  <li><a id="pfp2"><img class="pfp" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Kebab.JPG/640px-Kebab.JPG" alt="foto profilo"></a></li>
+                  <li><a id="pfp3"><img class="pfp" src="https://upload.wikimedia.org/wikipedia/it/thumb/7/77/Pikachu.png/800px-Pikachu.png" alt="foto profilo"></a></li>
+                </ul>
+              </div>
+        </div>
         <h1>Nome Cognome</h1>
         <h2>@Username</h2>
         <button onclick="window.open('index.html');">torna alla main page</button>
         </div>
-    </center>
+        <script src="script-profile.js"></script>
 </body>
 </html>
