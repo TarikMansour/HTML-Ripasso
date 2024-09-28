@@ -55,14 +55,14 @@ td {
   text-align:center;
   margin: 0;
   padding-top:0px;
-  padding:10px;
+  padding:0px;
 }
 #content{
   background-color:lightblue;
   display: grid;
-  grid-template-rows: 1fr 1fr; /* Two rows of equal height */
-  height: 100vh; /* Full height of the viewport */
-  width: 100%; /* Full width */
+  grid-template-rows: 1fr 1fr; 
+  height: 100vh; 
+  width: 100%; 
 }
 #footer{
   background-color: gray;
@@ -103,10 +103,15 @@ td {
   display:none;
 }
 .first-section{
-  
+  display: grid;
+    height: 50vh; /* Full height of the viewport */
+    place-items: center;
+    margin: 0;
+    padding: 0;
 }
 .second-section{
- 
+  
+  
 }
 .logged{
   height:40px;
