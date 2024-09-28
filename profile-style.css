@@ -1,3 +1,4 @@
+
 .pfp{
     width: 200px; border-radius: 200px
 }
@@ -5,3 +6,30 @@
     width:30%;
     height: auto;
 }
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 300px;
+    height:600px;
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  #dropdown-list{
+    display:block;
+    position:absolute;
+    text-align: center;
+  }
+  li a:hover{
+    background-color: aqua;
+  }
+  
